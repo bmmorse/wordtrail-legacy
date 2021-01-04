@@ -64,7 +64,14 @@ export default class Header extends React.Component {
       <>
         <Background className={this.props.page} />
         <Container>
-          <Link to='/'>wordtrail</Link>
+          <Link
+            to={{
+              pathname: '/',
+              state: { refresh: true },
+            }}
+          >
+            wordtrail
+          </Link>
           <Link to='/about' className='nav'>
             about
           </Link>

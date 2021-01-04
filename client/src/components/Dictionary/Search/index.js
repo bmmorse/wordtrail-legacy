@@ -91,7 +91,7 @@ export default class Search extends React.Component {
      *           = 1 | query Oxford entry endpoint
      *           = 2 | query Oxford lemma endpoint, then query Oxford entry
      */
-    this.TESTING = 1;
+    this.TESTING = 2;
   }
 
   onChange = (e) => {

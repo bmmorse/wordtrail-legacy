@@ -20,6 +20,7 @@ const Container = styled.div`
 export default class List extends React.Component {
   render() {
     const { dictionary } = this.props;
+
     return (
       <Container>
         <TransitionGroup component={null}>
