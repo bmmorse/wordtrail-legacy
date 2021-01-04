@@ -27,7 +27,11 @@ export default function About() {
       <Container>
         <div className='wrapper'>
           <h2>About</h2>
-          <p>Wordtrail is a dictionary app.</p>
+          <p>
+            Wordtrail delivers the dictionary to you without bloated ads and
+            bothersome popups. Rapidly look up a list of words without ever
+            reloading the page.
+          </p>
         </div>
       </Container>
     </>
