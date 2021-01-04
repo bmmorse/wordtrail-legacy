@@ -1,0 +1,27 @@
+{
+  "name": "wordtrail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "concurrently \"NODE_ENV=development nodemon\" \"cd client && npm start\"",
+    "prod": "concurrently \"NODE_ENV=production nodemon\" \"cd client && npm start\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^4.1.2",
+    "nodemon": "^1.19.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-sslify": "^1.2.0",
+    "uuid": "^8.3.2"
+  }
+}

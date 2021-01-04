@@ -1,0 +1,175 @@
+{
+  "data": {
+    "id": "ok",
+    "metadata": {
+      "operation": "retrieve",
+      "provider": "Oxford University Press",
+      "schema": "RetrieveEntry"
+    },
+    "results": [
+      {
+        "id": "OK",
+        "language": "en-gb",
+        "lexicalEntries": [
+          {
+            "entries": [
+              {
+                "homographNumber": "100",
+                "senses": [
+                  {
+                    "definitions": ["used to express agreement or acceptance"],
+                    "id": "m_en_gbus0715310.010",
+                    "subsenses": [
+                      {
+                        "definitions": ["used to introduce an utterance"],
+                        "id": "m_en_gbus0715310.013"
+                      },
+                      {
+                        "definitions": [
+                          "used at the end of a statement to invite agreement, approval, or confirmation"
+                        ],
+                        "id": "m_en_gbus0715310.014"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "language": "en-gb",
+            "lexicalCategory": { "id": "interjection", "text": "Interjection" },
+            "text": "OK"
+          },
+          {
+            "entries": [
+              {
+                "homographNumber": "101",
+                "senses": [
+                  {
+                    "definitions": ["satisfactory but not especially good"],
+                    "id": "m_en_gbus0715310.016",
+                    "subsenses": [
+                      {
+                        "definitions": [
+                          "in a satisfactory physical or mental state"
+                        ],
+                        "id": "m_en_gbus0715310.019"
+                      },
+                      {
+                        "definitions": ["permissible; allowable"],
+                        "id": "m_en_gbus0715310.020"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "language": "en-gb",
+            "lexicalCategory": { "id": "adjective", "text": "Adjective" },
+            "text": "OK"
+          },
+          {
+            "entries": [
+              {
+                "homographNumber": "102",
+                "senses": [
+                  {
+                    "definitions": [
+                      "in a satisfactory manner or to a satisfactory extent"
+                    ],
+                    "id": "m_en_gbus0715310.022"
+                  }
+                ]
+              }
+            ],
+            "language": "en-gb",
+            "lexicalCategory": { "id": "adverb", "text": "Adverb" },
+            "text": "OK"
+          },
+          {
+            "entries": [
+              {
+                "homographNumber": "103",
+                "senses": [
+                  {
+                    "definitions": ["an authorization or approval"],
+                    "id": "m_en_gbus0715310.026"
+                  }
+                ]
+              }
+            ],
+            "language": "en-gb",
+            "lexicalCategory": { "id": "noun", "text": "Noun" },
+            "text": "OK"
+          },
+          {
+            "entries": [
+              {
+                "homographNumber": "104",
+                "senses": [
+                  {
+                    "definitions": ["give approval to"],
+                    "id": "m_en_gbus0715310.032"
+                  }
+                ]
+              }
+            ],
+            "language": "en-gb",
+            "lexicalCategory": { "id": "verb", "text": "Verb" },
+            "text": "OK"
+          }
+        ],
+        "type": "headword",
+        "word": "OK"
+      },
+      {
+        "id": "OK",
+        "language": "en-gb",
+        "lexicalEntries": [
+          {
+            "entries": [
+              {
+                "homographNumber": "200",
+                "senses": [
+                  {
+                    "definitions": ["Oklahoma (in official postal use)."],
+                    "id": "m_en_gbus0715320.002"
+                  }
+                ]
+              }
+            ],
+            "language": "en-gb",
+            "lexicalCategory": { "id": "residual", "text": "Residual" },
+            "text": "OK"
+          }
+        ],
+        "type": "headword",
+        "word": "OK"
+      }
+    ],
+    "word": "OK"
+  },
+  "status": 200,
+  "statusText": "OK",
+  "headers": {
+    "connection": "close",
+    "content-encoding": "gzip",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 29 Nov 2020 04:13:01 GMT",
+    "etag": "W/\"7c9-/Tnz+64M1JreZm8DqPMY9hXWqZE\"",
+    "transfer-encoding": "chunked",
+    "vary": "Accept-Encoding",
+    "x-powered-by": "Express"
+  },
+  "config": {
+    "url": "/api/ok",
+    "method": "get",
+    "headers": { "Accept": "application/json, text/plain, */*" },
+    "transformRequest": [null],
+    "transformResponse": [null],
+    "timeout": 0,
+    "xsrfCookieName": "XSRF-TOKEN",
+    "xsrfHeaderName": "X-XSRF-TOKEN",
+    "maxContentLength": -1
+  },
+  "request": {}
+}
