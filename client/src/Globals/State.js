@@ -17,15 +17,9 @@ function MakeWord(word, partOfSpeech, definition) {
 
 const fakeState = [
   MakeWord(
-    'Africa',
-    'Noun',
-    'the second largest continent, a southward projection of the Old World land mass divided roughly in two by the equator and surrounded by sea except where the Isthmus of Suez joins it to Asia'
-  ),
-  MakeWord('Exquisite', 'Adjective', 'extremely beautiful and delicate'),
-  MakeWord(
-    'Rendition',
-    'Noun',
-    'a performance or interpretation, especially of a dramatic role or piece of music'
+    'hey',
+    'Interjection',
+    'used to attract attention, to express surprise, interest, or annoyance, or to elicit agreement'
   ),
 ];
 

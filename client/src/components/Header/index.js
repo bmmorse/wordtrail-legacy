@@ -45,36 +45,24 @@ const Background = styled.div`
   position: absolute;
   width: 100%;
   z-index: -100;
+
+  &.about {
+    background-color: #f1c2c2;
+  }
 `;
 
+/**
+ *
+ */
 export default class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.words = [
-      'delve into',
-      'explore',
-      'glance at',
-      'investigate',
-      'jump around',
-      'meander through',
-      'navigate',
-      'probe',
-      'query',
-      'scout',
-      'search',
-      'sift through',
-      'tour',
-      'traverse',
-    ];
-    this.state = {
-      animatedPosition: 0,
-    };
   }
 
   render() {
     return (
       <>
-        <Background className='BACKGROUND' />
+        <Background className={this.props.page} />
         <Container>
           <Link to='/'>wordtrail</Link>
           <Link to='/about' className='nav'>

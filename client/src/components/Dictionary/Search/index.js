@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
-import v from '../../../Globals/VARIABLES';
 import { errorAnimation } from './transition';
 import { CSSTransition } from 'react-transition-group';
 
@@ -158,7 +157,7 @@ export default class Search extends React.Component {
                 }
                 onChange={this.onChange}
                 onClick={(e) => {
-                  e.target.placeholder = '';
+                  dictionary.update({ error: false });
                 }}
                 onFocus={(e) => {
                   e.target.placeholder = '';

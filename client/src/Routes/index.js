@@ -31,7 +31,7 @@ export default class Routes extends React.Component {
           <Route exact path='/about'>
             {({ match }) => (
               <MakeRoute match={match}>
-                <Header />
+                <Header page='about' />
                 <About />
               </MakeRoute>
             )}

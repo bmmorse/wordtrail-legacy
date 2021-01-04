@@ -29,5 +29,3 @@ Globals provides the top level CSS styling and React's Scroll To Top function
 ```
 
 ## <Routes />
-
-Routes is the second top level wrapper for the application
