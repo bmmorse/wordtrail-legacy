@@ -31,7 +31,7 @@ export default class Dictionary extends React.Component {
     this.state = {
       error: false,
       loading: false,
-      wordList: [],
+      wordList: [...fakeState],
     };
 
     this.setState = this.setState.bind(this);

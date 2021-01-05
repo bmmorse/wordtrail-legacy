@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import v from '../../../Globals/VARIABLES';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import Word from './Word';
 
