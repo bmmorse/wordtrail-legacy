@@ -3,11 +3,12 @@ import styled from 'styled-components';
 import axios from 'axios';
 import { errorAnimation } from './transition';
 import { CSSTransition } from 'react-transition-group';
+import v from '../../../Globals/VARIABLES';
 
 const Container = styled.div`
   display: flex;
   justify-content: center;
-  padding: 1rem;
+  padding: 0 1rem;
   width: 100%;
 `;
 
@@ -19,41 +20,49 @@ const Form = styled.form`
   position: relative;
   width: 100%;
 
-  label {
-    align-self: center;
-    font-size: 12px;
-    color: hsla(0, 0%, 0%, 0.64);
-    letter-spacing: 0;
-    line-height: 1;
+  .labelWrapper {
+    display: flex;
+    justify-content: center;
     margin-bottom: 0.5rem;
+  }
+
+  label {
+    font-size: 1.25rem;
+    color: #25564d;
+    line-height: 2rem;
+    margin: 2.5rem 0 2rem 0; // 72px 64px
+    @media (min-width: 64rem) {
+      margin: 4.5rem 0 4rem 0; // 72px 64px
+    }
   }
 `;
 
 const InputWrapper = styled.div`
+  align-items: baseline;
   border-radius: 8px;
-  display: flex;
   background: #e1fdfa;
   box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.29), 0 0 16px 0 rgba(0, 0, 0, 0.08);
   border-radius: 8px;
+  height: 64px;
+  position: relative;
   ${errorAnimation('error')}
 
   input {
     background: none;
     border: none;
     color: hsla(0, 0%, 0%, 0.64);
+    font-family: ${v.helvetica};
     font-size: 1rem;
-    font-weight: 400;
     line-height: 1.5rem;
-    margin: 16px 24px;
-    width: 100%;
+    height: 24px;
+    outline: none;
+    width: 80%;
+    position: absolute;
+    top: 20px;
+    left: 24px;
 
     &::-webkit-search-cancel-button {
       display: none;
-    }
-
-    &:focus {
-      border: none;
-      outline: none;
     }
 
     &::placeholder {
@@ -63,12 +72,17 @@ const InputWrapper = styled.div`
 
   button {
     color: #25564d;
-    background: #9ae0d3;
+    background: #c2f1e9;
     border: none;
-    border-radius: 8px;
-    margin: 4px;
+    border-radius: 0.5rem;
+    font-family: ${v.helvetica};
+    font-size: 1rem;
+    line-height: 1;
     outline: none;
-    padding: 12px 36px;
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 8px;
+    right: 8px;
   }
 `;
 
@@ -102,8 +116,8 @@ export default class Search extends React.Component {
 
   onSubmit = (e) => {
     const { dictionary } = this.props;
-    this.setState({ inputValue: '' });
     this.inputRef.current.blur();
+    this.setState({ inputValue: '' });
 
     const routes = [
       `/test/${this.state.inputValue}`,
@@ -124,10 +138,10 @@ export default class Search extends React.Component {
       })
       // ERRORS
       .catch((err) => {
-        dictionary.update({ error: true, loading: false });
-        this.inputRef.current.blur();
-        this.inputRef.current.placeholder = 'No result';
         this.setState({ inputValue: '' });
+        this.inputRef.current.blur();
+        dictionary.update({ error: true, loading: false });
+        this.inputRef.current.placeholder = 'No result';
       });
   };
 
@@ -136,7 +150,9 @@ export default class Search extends React.Component {
     return (
       <Container>
         <Form action='.' onSubmit={this.onSubmit} className='FORM'>
-          <label htmlFor='word'>search the dictionary</label>
+          <div className='labelWrapper'>
+            <label htmlFor='word'>search the dictionary</label>
+          </div>
 
           <CSSTransition
             in={dictionary.state.error}

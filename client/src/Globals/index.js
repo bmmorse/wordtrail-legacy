@@ -22,6 +22,10 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     margin: 0;
     padding: 0;
+    font-family: ${VAR.helvetica};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
   }
 
   body {
@@ -35,6 +39,11 @@ const GlobalStyle = createGlobalStyle`
     color: ${VAR.dg1};
     line-height: 1.5;
     text-decoration: none;
+  }
+
+  input,
+  button {
+    font-family: ${VAR.helvetica};
   }
 
   h1,

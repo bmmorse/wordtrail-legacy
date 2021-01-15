@@ -21,30 +21,34 @@ const Container = styled.div`
   }
 
   a {
-    color: ${v.dg3};
-    font-weight: 500;
+    color: #25564d;
+    font-family: 'HelveticaNeue-Medium', ${v.helvetica};
     font-size: 1.5rem;
     line-height: 1;
-    letter-spacing: 0.4px;
 
     &.nav {
       font-size: 0.75rem;
-      font-weight: 400;
       line-height: 1;
+      font-family: 'HelveticaNeue-Medium', ${v.helvetica};
     }
   }
 `;
 
 const Background = styled.div`
-  // background: url(${background}) no-repeat;
-  background-color: #9ae0d3;
+  background: url(${background}) no-repeat;
+  background-color: white;
+  background-position: top 120px center;
   background-size: 100%;
-  background-position: fixed;
-  height: 100%;
+  height: 100vh;
   min-height: 100vh;
-  position: absolute;
+  position: fixed;
+  overflow: hidden;
   width: 100%;
   z-index: -100;
+
+  @media (min-width: 64rem) {
+    background-position: top 150px center;
+  }
 
   &.about {
     background-color: #f1c2c2;

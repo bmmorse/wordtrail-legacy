@@ -22,7 +22,7 @@ export default class Routes extends React.Component {
           <Route exact path='/'>
             {({ match }) => (
               <MakeRoute match={match}>
-                <Header />
+                <Header page='home' />
                 <Dictionary CONFIG={this.props.config} />
               </MakeRoute>
             )}
