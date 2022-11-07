@@ -5,6 +5,7 @@ const headers = api.headers;
 
 router.get('/double/:input', (req, res, next) => {
   // hit the Oxford lemma endpoint
+  console.log(req.params.input);
   axios
     .get(`${api.lemmaURL}${req.params.input}`, { headers })
     .then((response) => {
@@ -15,6 +16,7 @@ router.get('/double/:input', (req, res, next) => {
         .then((response) => {
           let wordObject = api.getEntry(response.data);
           res.send(wordObject);
+          console.log(wordObject);
         })
         .catch(next);
     })
